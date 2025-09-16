@@ -1,0 +1,229 @@
+/* style.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #1A237E; /* Deep navy for text */
+  background-color: #F5F6F5; /* Soft off-white background */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #26A69A, #4DB6AC); /* Teal gradient */
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+header p {
+  font-size: 1.3em;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+header a {
+  color: #FF6F61; /* Coral for links */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header a:hover {
+  color: #FFE082; /* Soft yellow for hover */
+  transform: scale(1.05);
+}
+
+/* Navigation Styling */
+nav {
+  background-color: #fff;
+  padding: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #1A237E; /* Deep navy */
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #26A69A; /* Teal background on hover */
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Section Styling */
+section {
+  background-color: #fff;
+  margin: 25px 0;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid #FF6F61; /* Coral accent border */
+}
+
+section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+  font-size: 2em;
+  color: #1A237E; /* Deep navy */
+  margin-bottom: 20px;
+  border-bottom: 3px solid #26A69A; /* Teal underline */
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+section ul {
+  list-style: none;
+}
+
+section ul li {
+  font-size: 1.15em;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 25px;
+}
+
+section ul li::before {
+  content: "➤"; /* Arrow icon for list items */
+  color: #FF6F61; /* Coral */
+  position: absolute;
+  left: 0;
+  font-size: 1.3em;
+}
+
+section#personal ul li strong,
+section#education ul li strong,
+section#experience ul li strong {
+  color: #1A237E; /* Deep navy */
+  font-weight: 600;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: linear-gradient(135deg, #1A237E, #283593); /* Navy gradient */
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 25px;
+  font-weight: 400;
+}
+
+footer p {
+  font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  header p {
+    font-size: 1.1em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 12px 0;
+  }
+
+  section {
+    padding: 25px;
+  }
+
+  section h2 {
+    font-size: 1.7em;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 30px 15px;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  section ul li {
+    font-size: 1em;
+  }
+
+  nav ul li a {
+    font-size: 1em;
+  }
+}
+
+/* Animations */
+section {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
